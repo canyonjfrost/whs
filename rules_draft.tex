@@ -1,0 +1,209 @@
+\documentclass[twocolumn]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+\usepackage{lmodern}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage[perpage]{footmisc}
+\usepackage{microtype}
+\usepackage{varioref}
+\usepackage{cleveref}
+
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\die}{\text{d}}
+
+\title{Some rules}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+Quick character creation:
+
+\begin{enumerate}
+\item Generate \textsc{diccs} scores, $1\die10$, rerolling 10s, divide by 2 rounding up
+\item Choose a class
+\item Make up skills (5 points, 2 more if Rogue)
+\item Make up inventory
+\item Make up a name, personality, and physical description
+\end{enumerate}
+
+The basics of play, real fast:
+
+\begin{itemize}
+\item If you want to do something difficult and you have net advantage, roll $X\die10$ (where $X$ is the number of distinct advantages you have) and take the highest
+\item If you want to do something difficult and you have net disadvantage, roll $X\die10$ (where $X$ is the number of distinct disadvantages you have) and take the lowest
+\item If you get hit, roll $C\die10$ (where $C$ is your Constitution) and subtract the lowest from your Health
+\item If lots of people are trying to do stuff at once, declare actions in order of Dexterity, from lowest to highest; resolve actions from highest to lowest
+\end{itemize}
+
+\section{Characters}
+
+You need to make a character to interact with the world.
+
+Characters have attributes, classes, skills, and equipment.
+
+The attributes are: Dexterity, Intelligence, Charisma, Constitution, and Strength.
+You can remember them with the acronym \textsc{diccs}.
+To generate your attribute scores, roll $1\die10$ for each attribute in the list.\footnotemark
+If you get a 10, reroll until you have a different number.
+Your attribute is the number you rolled divided by 2, rounding up.
+
+\footnotetext{$X\die Y$ is shorthand for $X$ number of $Y$-sided dice.}
+
+You can choose your class from the list: Fighter, Rogue, Magic-User.
+
+You can choose your skills; just make up some things you're good at.
+You get 5 skill points.
+Spend 1 skill point for each skill you choose
+These are your only skills.
+If you choose fewer than 5 skills, you can raise a skill by 1 by spending 1 skill point.
+
+You can make up your inventory as you please.
+You get 5 items, plus clothing and a waterskin.
+
+\section{Classes}
+
+\subsection{Fighter}
+Fighters can fight.
+Unless the Fighter is surprised or faced with overwhelming odds, it is impossible for any human other than another Fighter to attack them with advantage.
+Moreover they attack all humans except other Fighters with advantage.
+If two Fighters fight, the Fighter with the higher level has advantage.
+
+They are the only class able to wear heavy armor and wield two-handed weapons without being disadvantaged.
+
+If a Fighter successfully hits something, they add their level to the damage rolled to determine total damage done.
+
+Fighters are \emph{required} to have at least one combat-related skill.
+
+\subsection{Rogue}
+Rogues can move quickly.
+They always move before every other human, and often before animals as well.
+
+Rogues have 2 extra skill points at character creation.
+Every time they level up, they gain 1 skill point.
+
+\subsection{Magic-User}
+Magic-Users can use magic.
+They can only do this when they have their grimoire with them.
+Note that this need not be a book---any way the formulas could be preserved and carried, works, from tattoos to inscribed chains.
+At creation Magic-Users get 3 random spells.
+See \vref{magic} for more.
+
+\section{Skills}\label{skills}
+
+We want to quantify skill differentials.
+If a thing is hard to do but you are trained to do it, you have some number between 1 and 9 telling you how good you are at it.
+Each skill should fall under some attribute.
+Each skill has a value equal to that of the associated attribute, plus the number of skill points spent on that skill.
+
+\section{Doing things}
+
+In general if you want to do something just like say it and it'll be done.
+Like come on you obviously know how to open doors and walk up stairs.
+But not everything is that easy.
+
+Say you want to do something hard.
+Then you roll a die to see if you succeed.
+If you're rolling against an inanimate obstacle, the \textsc{dm} will set a difficulty level that you have to roll over.
+If you're rolling against an animate obstacle, you will roll against the \textsc{dm}, and whoever gets the highest wins.
+
+\subsection{Better and worse odds}
+But not all hard tasks are equally hard.
+People can have advantages and disadvantages from all sorts of things---their abilities, their equipment, their fortitude, their dedication, and general circumstance.
+
+Advantages and disadvantages are determined ad hoc.
+The only set guideline for determining advantages is: for each of your Health points below zero, take a disadvantage.
+Otherwise you take advantages for anything you can convince me will help you, and take disadvantages for anything I think will hinder you.
+
+\paragraph{An important caveat}
+Advantages and disadvantages only apply once in a given check.
+You can't double-dip.
+So if I'm fighting you and I'm standing above you on a hill, then I get an advantage for having the high ground, but you don't also get a disadvantage for having the low ground.
+
+Count your advantages and disadvantages.
+Subtract the number of disadvantages from the number of advantages.
+If the number is positive, roll $1+\text{that number}$ dice; if negative, roll $1 - \text{that number}$ dice.
+Take the highest number rolled if you have more advantages than disadvantages.
+Take the lowest number rolled if you have more disadvantages than advantages.
+
+\subsection{Multiple-user checks}
+This will go clearest by example.
+Say John and Marsha are wrestling while Bill is trying to drop a boulder on John.
+To figure out what happens, we'd count up all the different actions and advantages and everybody involved would roll at once.
+\emph{Only the action of the person who rolled highest will occur.}
+So \emph{either} John will put Marsha in a headlock \emph{or} Marsha will throw John off \emph{or} Bill's boulder will hit John (and if this happens there's a decent chance Marsha will be hit as well!).
+
+\subsection{Doing things at the same time}
+It often happens that you want to do something at the same time as someone else, and their success is somehow tied up with yours.
+A prime example is combat.
+In such cases, every involved party will declare what they are they are trying to do in ascending order of Dexterity.
+Lower-Dexterity people say their action first, so the higher-Dexterity people can hear them and plan accordingly.
+If two people are tied and allied they should decide the order that they will declare their actions in themselves.
+If they're not under the same banner the person with the highest level goes first.
+If their levels are tied, flip a coin.
+
+\section{Hitting things and getting hit}\label{weapon}
+
+All weapons do the same amount of damage.
+If you try and hit someone, make a check like in any other difficult action.
+If you win you do damage.
+
+\subsection{Health and damage}
+
+Everybody has some Health.
+The maximum amount of Health they can have is equal to their Constitution.
+To see how much damage you do, roll dice equal to your target's Constitution and take the lowest number.
+If you are a Fighter, add your level to that number.
+Then subtract that number from their Health.
+If they go below 0 they get knocked out---flip a coin each round to see if they recover.
+Also, they're injured---see \vref{injuries}.
+If they get medical attention they can recover Health but if their injury is the sort that can't be healed, like a severed limb, it won't be.
+Without medical attention humans recover 1 Health per day.
+
+\begin{table}
+\caption{Injuries}
+\label{injuries}
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+\toprule
+$1\die6 - H$\footnotemark & Injury \\
+\midrule
+2 & Cut or bruise. Will leave a scar or permanent bump. \\
+3 & Weapon arm broken. Attack with disadvantage for a month. \\
+4 & Face blow. Save\footnotemark\ or lose an eye. \\
+5 & Crotch shot. Save or lose your bits. \\
+6 & Limb wrecked. Lose $1\die6$: 1-2. a leg; 3-4; an arm; 5. a head; 6. a torso. If head or torso: save or die. \\
+7 & Head bashed. Save or die. Lose $1\die6$: 1. an eye; 2. an ear; 3. a nose; 4. a part of the skull; 5. a jaw; 6. a tongue. \\
+8 & Body horror. Save or die. Lose 1 Constitution permanently. \\
+9+ & Die. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\footnotetext[1]{Where $H$ stands for Health.
+Note that you only roll on this table when your Health is \textit{negative}, so the numbers only go up.}
+
+\footnotetext{To make a save, roll $1\die10$; if it's under your Constitution, you save successfully.}
+
+\section{Magic}\label{magic}
+
+Magic-Users can cast spells.
+This takes like two turns to do.
+If a Magic-User gets interrupted in casting their spell, well, things get hairy.
+The spell automatically fails and I'll roll on a special, super-secret table of horrible things.
+Interruption includes being attacked \emph{at all} in melee, or being successfully attacked at range.
+However a Magic-User can just stop casting a spell, if they like, with no penalty.
+
+Casting a spell costs mana.
+Every Magic-User has mana equal to their level $+1$.
+Every morning when the sun rises their mana refills to its maximum.
+Magic-Users can spend as much or as little (down to 1) mana as they like on a spell.
+Spending more mana will increase the power of the spell.
+If a Magic-User spends more mana than they have, they have to make an Intelligence check; failure results in me rolling on my special, super-secret table of horrible things.
+
+\end{document}
